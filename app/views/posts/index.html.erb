@@ -1,0 +1,9 @@
+
+<% @posts.each do |post| %>
+  <%= link_to post.name, user_post_path%>
+<% end %>
+
+<% unless Post.first %>
+  <p> No posts created for the moment! </p>
+  <%= link_to "New Post", new_user_post_path %>
+<% end %>

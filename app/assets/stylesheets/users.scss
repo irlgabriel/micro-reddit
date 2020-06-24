@@ -1,0 +1,30 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+label {
+  display: block;
+  margin: 10px 0px 10px 20%;
+  font-size: 20px;
+}
+body {
+  width: 30%;
+  margin: 25px auto;
+}
+
+.field:first-of-type {
+  margin-bottom: 10px;
+}
+
+.field:last-of-type {
+  margin-bottom: 10px;
+}
+.field:last-of-type input {
+  padding: 5px;
+  margin-left: 15%;
+}
+a{
+  text-decoration: none;
+}
