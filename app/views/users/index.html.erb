@@ -1,8 +1,8 @@
 <ul>
   <% @users.each do |user| %>
-    <ul><%= link_to user.name, user %></ul>
+    <ul class="user"><%= link_to user.name, user %></ul>
       <li><%= link_to 'Edit', edit_user_path(user) %>
-      <li><%= link_to 'Delete', @user, method: destroy, data: { confirm: 'Are you sure?'} %>
+      <li><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?'} %></li>
     </ul>
   <% end %>
 </ul>

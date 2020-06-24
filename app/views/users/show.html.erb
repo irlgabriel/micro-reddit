@@ -8,5 +8,6 @@
     <li><%link_to post.post_title, post_path%></li> 
   <% end%>
 </ul>
+<%= link_to "Create new post", new_user_post_path(@user)%>
 
 <%= link_to "<--Back", users_path %>

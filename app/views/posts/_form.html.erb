@@ -1,5 +1,5 @@
 
-<%= form_for @post do |form| %>
+<%= form_with(model: post, local: true) do |form| %>
 
   <div class="field">
     <%= form.label :post_title %>
