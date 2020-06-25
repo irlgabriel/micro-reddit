@@ -1,0 +1,12 @@
+
+<% posts.each do |post| %>
+  <%= link_to post.post_title, user_post_path(user, post) %>
+<% end %>
+
+<%= link_to "Back", user_path(user), {class:'block'}%>
+
+<% unless Post.first %>
+  <p> No posts created for the moment! </p>
+  <%= link_to "New Post", new_user_post_path %>
+<% end %>
+

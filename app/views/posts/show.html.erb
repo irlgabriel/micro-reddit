@@ -1,8 +1,4 @@
 
-  <h1 id="post_title">
-    <%= @post.post_title%>
-  </h1>
 
-  <p id="post_body">
-    <%= @post.post_body%>
-  </p>
+<%= render partial: 'list_posts', locals: {user: @user, posts: @posts}%>
+

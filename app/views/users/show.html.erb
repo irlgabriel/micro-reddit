@@ -1,13 +1,22 @@
 
 
 <h1>You are: <%= @user.name %> </h1>
-<h1>Posts: </h1>
+
+<h1>Posts: <%= @user.posts.count %></h1>
+<% @user.posts.each do |post| %>
+  <%= link_to post.post_title, user_post_path(@user,post), {class:'inline'} %>
+  <%= link_to 'Edit', edit_user_post_path(@user, post) %>
+  <% #link_to 'Delete', @user, method: destroy %>
+
+<% end %>
+
+
 
 <ul>
   <% @user.posts.each do |post| %>
-    <li><%link_to post.post_title, post_path%></li> 
+    <li><%link_to post.post_title, user_post_path(@user,post) %></li> 
   <% end%>
 </ul>
 <%= link_to "Create new post", new_user_post_path(@user)%>
 
-<%= link_to "<--Back", users_path %>
+<%= link_to "<--Back", users_path, {class:'block'} %>
