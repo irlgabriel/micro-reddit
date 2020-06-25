@@ -1,2 +1,2 @@
 
-<%= render 'form', post: @post%>
+<%= render partial: 'form', locals: {user: User.find(params[:user_id]), post: @post} %>

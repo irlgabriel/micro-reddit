@@ -1,6 +1,6 @@
 
 <% @posts.each do |post| %>
-  <%= link_to post.name, user_post_path%>
+  <%= link_to post.post_title, root_path %>
 <% end %>
 
 <% unless Post.first %>
