@@ -1,1 +1,13 @@
-<% byebug %>
+
+<div class="comments">
+  <h2> Comments (<%= @comments.count %>) </h2>
+  <% @comments.each do |comment| %>
+    <ul>
+      <li class="comment">
+        <h3 class="comment-author"> <%= comment.author_name %> </h3>
+        <h5 class="comment-title"> <%= comment.title %></h5>
+        <p class="comment-body"> <%= comment.body %></p>
+      </li>
+    </ul>
+  <% end %>
+</div>

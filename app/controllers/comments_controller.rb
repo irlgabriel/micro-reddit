@@ -4,6 +4,10 @@ class CommentController < ApplicationController
     @comment = Comment.new
   end
 
+  def show
+    
+  end
+
   private
 
   def comment_params

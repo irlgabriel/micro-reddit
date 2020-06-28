@@ -1,12 +1,18 @@
+<div class="post">
+  <% user.posts.each do |post| %>
+    <h1 class="post-title"><%= link_to post.post_title, user_post_path(user, post) %></h1>
+    <div class="post-body">
+      &nbsp;&nbsp;&nbsp;&nbsp; <%= post.post_body %>
+    </div>
+  <% end %>
 
-<% user.posts.each do |post| %>
-  <%= link_to post.post_title, user_post_path(user, post) %>
-<% end %>
+  <p class="back"><%= link_to "Back", user_path(user), {class:'block'}%></p>
 
-<%= link_to "Back", user_path(user), {class:'block'}%>
+  <% unless user.posts.first %>
+    <p> No posts created for the moment! </p>
+    <%= link_to "New Post", new_user_post_path %>
+  <% end %>
+</div>
 
-<% unless user.posts.first %>
-  <p> No posts created for the moment! </p>
-  <%= link_to "New Post", new_user_post_path %>
-<% end %>
+
 

@@ -1,3 +1,20 @@
 // Place all the styles related to the comment controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.comments {
+  margin-left: -80px;
+}
+li {
+  list-style: none;
+}
+.comment-title {
+  margin-top: 15px;
+  margin-left: 25px;
+}
+.comment-body{
+  margin-top: 15px;
+  margin-left: 30px;
+}

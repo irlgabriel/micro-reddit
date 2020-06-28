@@ -1,4 +1,8 @@
 
-
-<%= render partial: 'list_posts', locals: {user: User.find(params[:user_id]), posts: @posts} %>
+<div class="post">
+  <h1> Posts: (<%= @user.posts.count %>) </h1>
+  <% @user.posts.each do |post| %>
+    <h3><%= link_to post.post_title, user_post_path(@user, post) %></h1>
+  <% end %>
+</div>
 

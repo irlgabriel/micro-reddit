@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#post_title{
-  margin-bottom: 45px
+.post-title{
+  width: 40%;
+  margin: 0 auto 45px auto;
 }
-#post_body{
-  margin-left: -200px;
-}
+
+

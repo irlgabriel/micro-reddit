@@ -1,0 +1,17 @@
+
+<%= form_with model: [user, post, comment], local: true do %>
+  <div class="label">
+    <%= form.label :author_name %>
+    <%= form.string :author_name%>
+  </div>
+
+  <div class="label">
+    <%= form.label :title %>
+    <%= form.string :title %>
+  </div>
+
+  <div class="label">
+    <%= form.label :body %>
+    <%= form.text :body %>
+  </div>
+<% end%>
